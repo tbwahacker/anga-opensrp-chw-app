@@ -4,8 +4,8 @@ import org.joda.time.LocalDate;
 import org.smartregister.chw.core.contract.ScheduleTask;
 import org.smartregister.chw.core.domain.BaseScheduleTask;
 import org.smartregister.chw.core.utils.CoreConstants;
-import org.smartregister.chw.malaria.dao.MalariaDao;
-import org.smartregister.chw.malaria.util.Constants;
+//import org.smartregister.chw.malaria.dao.MalariaDao;
+//import org.smartregister.chw.malaria.util.Constants;
 
 import java.util.Date;
 import java.util.List;
@@ -17,7 +17,8 @@ public class MalariaScheduler extends BaseTaskExecutor {
 
         BaseScheduleTask baseScheduleTask = prepareNewTaskObject(baseEntityID);
 
-        Date malaria_date = MalariaDao.getMalariaTestDate(baseEntityID);
+//        Date malaria_date = MalariaDao.getMalariaTestDate(baseEntityID);  malaria hapa piaaa
+        Date malaria_date = new Date();
         if (malaria_date != null) {
             LocalDate localDate = new LocalDate(malaria_date.getTime());
 
@@ -28,9 +29,9 @@ public class MalariaScheduler extends BaseTaskExecutor {
             baseScheduleTask.setScheduleExpiryDate(localDate.plusDays(14).toDate());
 
             // completion date
-            if (eventName.equalsIgnoreCase(Constants.EVENT_TYPE.MALARIA_FOLLOW_UP_VISIT)) {
-                baseScheduleTask.setScheduleCompletionDate(eventDate);
-            }
+//            if (eventName.equalsIgnoreCase(Constants.EVENT_TYPE.MALARIA_FOLLOW_UP_VISIT)) {
+//                baseScheduleTask.setScheduleCompletionDate(eventDate);
+//            }
 
             // overdue date
             baseScheduleTask.setScheduleOverDueDate(localDate.plusDays(10).toDate());

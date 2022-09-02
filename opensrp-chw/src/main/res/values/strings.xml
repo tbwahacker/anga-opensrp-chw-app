@@ -430,6 +430,11 @@
     <string name="ctc_number">CTC Number</string>
     <string name="enrolled_clinic">Enrolled Clinic</string>
     <string name="referred_by">Referred By %s</string>
+    <string name="view_anga">View Anga</string>
+    <string name="condomdistribution">Condom Distribution</string>
+    <string name="angamodule">Anga\'s Module</string>
+    <string name="angaregistration">Anga Module Registration</string>
+    <string name="anga_register">Anga Register</string>
 
 
 </resources>

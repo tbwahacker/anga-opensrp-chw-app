@@ -114,6 +114,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         MalariaRegisterActivity.startMalariaRegistrationActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, familyBaseEntityId);
     }
 
+
     @Override
     protected void startFpRegister() {
         String dob = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
@@ -167,6 +168,18 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
             Timber.e(e);
         }
     }
+
+    @Override
+    protected void startAngaRegister() {
+        try {
+            AngaRegisterActivity.startAngaFormActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, familyBaseEntityId);
+//            AngaRegisterActivity.startAngaFormActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, Constants.JSON_FORM.getTbRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, Constants.JSON_FORM.getTbRegistration()).toString());
+        } catch (Exception e) {
+            Timber.e("Anga error : "+e);
+        }
+    }
+
+
 
     @Override
     protected void startEditMemberJsonForm(Integer title_resource, CommonPersonObjectClient client) {

@@ -16,7 +16,7 @@ import org.smartregister.chw.R;
 import org.smartregister.chw.core.custom_views.NavigationMenu;
 import org.smartregister.chw.fragment.CompletedReferralRegisterFragment;
 import org.smartregister.chw.fragment.ReferralRegisterFragment;
-import org.smartregister.chw.malaria.util.MalariaJsonFormUtils;
+//import org.smartregister.chw.malaria.util.MalariaJsonFormUtils;
 import org.smartregister.chw.referral.activity.BaseReferralRegisterActivity;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.helper.BottomNavigationHelper;
@@ -102,30 +102,30 @@ public class ReferralRegisterActivity extends BaseReferralRegisterActivity imple
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK && requestCode == org.smartregister.chw.malaria.util.Constants.REQUEST_CODE_GET_JSON) {
-            String jsonString = data.getStringExtra(org.smartregister.chw.malaria.util.Constants.JSON_FORM_EXTRA.JSON);
-            try {
-                JSONObject form = new JSONObject(jsonString);
-                Triple<Boolean, JSONObject, JSONArray> registrationFormParams = MalariaJsonFormUtils.validateParameters(form.toString());
-                JSONObject jsonForm = registrationFormParams.getMiddle();
-                JSONArray fields = registrationFormParams.getRight();
-                String encounter_type = jsonForm.optString(org.smartregister.chw.malaria.util.Constants.JSON_FORM_EXTRA.ENCOUNTER_TYPE);
-
-                if (org.smartregister.chw.malaria.util.Constants.EVENT_TYPE.MALARIA_FOLLOW_UP_VISIT.equals(encounter_type)) {
-                    JSONObject fever_still_object = getFieldJSONObject(fields, "fever_still");
-                    if (fever_still_object != null && "Yes".equalsIgnoreCase(fever_still_object.optString(VALUE))) {
-                        ReferralRegisterActivity.startReferralRegistrationActivity(this, jsonForm.optString(ENTITY_ID));
-                    }
-                } else {
-                    startRegisterActivity();
-                }
-            } catch (JSONException e) {
-                Timber.e(e);
-            }
-
-        } else {
-            finish();
-        }
+//        if (resultCode == Activity.RESULT_OK && requestCode == org.smartregister.chw.malaria.util.Constants.REQUEST_CODE_GET_JSON) {
+//            String jsonString = data.getStringExtra(org.smartregister.chw.malaria.util.Constants.JSON_FORM_EXTRA.JSON);
+//            try {
+//                JSONObject form = new JSONObject(jsonString);
+//                Triple<Boolean, JSONObject, JSONArray> registrationFormParams = MalariaJsonFormUtils.validateParameters(form.toString());
+//                JSONObject jsonForm = registrationFormParams.getMiddle();
+//                JSONArray fields = registrationFormParams.getRight();
+//                String encounter_type = jsonForm.optString(org.smartregister.chw.malaria.util.Constants.JSON_FORM_EXTRA.ENCOUNTER_TYPE);
+//
+//                if (org.smartregister.chw.malaria.util.Constants.EVENT_TYPE.MALARIA_FOLLOW_UP_VISIT.equals(encounter_type)) {
+//                    JSONObject fever_still_object = getFieldJSONObject(fields, "fever_still");
+//                    if (fever_still_object != null && "Yes".equalsIgnoreCase(fever_still_object.optString(VALUE))) {
+//                        ReferralRegisterActivity.startReferralRegistrationActivity(this, jsonForm.optString(ENTITY_ID));
+//                    }
+//                } else {
+//                    startRegisterActivity();
+//                }
+//            } catch (JSONException e) {
+//                Timber.e(e);
+//            }
+//
+//        } else {
+//            finish();
+//        }
 
     }
 

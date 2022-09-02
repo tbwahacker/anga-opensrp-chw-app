@@ -10,7 +10,7 @@ import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.MalariaVisitUtil;
 import org.smartregister.chw.fp.dao.FpDao;
 import org.smartregister.chw.hiv.dao.HivDao;
-import org.smartregister.chw.malaria.dao.MalariaDao;
+//import org.smartregister.chw.malaria.dao.MalariaDao;
 import org.smartregister.chw.tb.dao.TbDao;
 import org.smartregister.util.Utils;
 
@@ -29,9 +29,9 @@ public class UtilsFlv {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
-            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
-            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate,followUpDate);
+//            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
+//            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
+//            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate,followUpDate);
             return null;
         }
 
@@ -44,11 +44,11 @@ public class UtilsFlv {
         }
     }
     public static void updateMalariaMenuItems(String baseEntityId, Menu menu) {
-        if (MalariaDao.isRegisteredForMalaria(baseEntityId)) {
-            Utils.startAsyncTask(new UpdateFollowUpMenuItem(baseEntityId, menu), null);
-        } else {
-            menu.findItem(R.id.action_malaria_registration).setVisible(true);
-        }
+//        if (MalariaDao.isRegisteredForMalaria(baseEntityId)) {
+//            Utils.startAsyncTask(new UpdateFollowUpMenuItem(baseEntityId, menu), null);
+//        } else {
+//            menu.findItem(R.id.action_malaria_registration).setVisible(true);
+//        }
     }
 
     public static void updateFpMenuItems(String baseEntityId, Menu menu) {

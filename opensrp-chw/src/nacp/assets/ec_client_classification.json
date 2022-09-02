@@ -570,6 +570,13 @@
             "creates_case": [
               "ec_sbcc"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "Condom Distribution",
+            "creates_case": [
+              "condom_distribution"
+            ]
           }
         ]
       }

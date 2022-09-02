@@ -9,7 +9,7 @@ import org.smartregister.chw.activity.ChildProfileActivity;
 import org.smartregister.chw.activity.FamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.activity.HivIndexContactProfileActivity;
 import org.smartregister.chw.activity.HivProfileActivity;
-import org.smartregister.chw.activity.MalariaProfileActivity;
+//import org.smartregister.chw.activity.MalariaProfileActivity;
 import org.smartregister.chw.activity.PncMemberProfileActivity;
 import org.smartregister.chw.activity.TbProfileActivity;
 import org.smartregister.chw.anc.activity.BaseAncMemberProfileActivity;
@@ -19,7 +19,7 @@ import org.smartregister.chw.core.task.CoreChwNotificationGoToMemberProfileTask;
 import org.smartregister.chw.fp.dao.FpDao;
 import org.smartregister.chw.hiv.dao.HivDao;
 import org.smartregister.chw.hiv.dao.HivIndexDao;
-import org.smartregister.chw.malaria.activity.BaseMalariaProfileActivity;
+//import org.smartregister.chw.malaria.activity.BaseMalariaProfileActivity;
 import org.smartregister.chw.pnc.activity.BasePncMemberProfileActivity;
 import org.smartregister.chw.tb.dao.TbDao;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
@@ -70,8 +70,8 @@ public class ChwGoToMemberProfileBasedOnRegisterTask extends CoreChwNotification
         return PncMemberProfileActivity.class;
     }
 
-    @Override
-    protected Class<? extends BaseMalariaProfileActivity> getMalariaProfileActivityClass() {
-        return MalariaProfileActivity.class;
-    }
+//    @Override
+//    protected Class<? extends BaseMalariaProfileActivity> getMalariaProfileActivityClass() {
+//        return MalariaProfileActivity.class;
+//    }
 }

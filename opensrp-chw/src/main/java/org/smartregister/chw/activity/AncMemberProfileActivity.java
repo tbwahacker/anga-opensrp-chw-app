@@ -48,7 +48,7 @@ import org.smartregister.chw.custom_view.AncFloatingMenu;
 import org.smartregister.chw.dataloader.AncMemberDataLoader;
 import org.smartregister.chw.dataloader.FamilyMemberDataLoader;
 import org.smartregister.chw.interactor.AncMemberProfileInteractor;
-import org.smartregister.chw.malaria.dao.MalariaDao;
+//import org.smartregister.chw.malaria.dao.MalariaDao;
 import org.smartregister.chw.model.FamilyProfileModel;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.AncMemberProfilePresenter;
@@ -182,9 +182,9 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
                     org.smartregister.chw.util.Constants.JSON_FORM.getGbvReferralForm(), CoreConstants.TASKS_FOCUS.SUSPECTED_GBV));
         }
 
-        if (MalariaDao.isRegisteredForMalaria(baseEntityID)) {
-            referralTypeModels.add(new ReferralTypeModel(getString(R.string.client_malaria_follow_up), null, null));
-        }
+//        if (MalariaDao.isRegisteredForMalaria(baseEntityID)) {
+//            referralTypeModels.add(new ReferralTypeModel(getString(R.string.client_malaria_follow_up), null, null));
+//        }
     }
 
     @Override
@@ -211,6 +211,14 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
             startCBHSRegister(commonPersonObject);
             return true;
         }
+
+        if (itemId == R.id.action_view_anga) {
+           Intent intent = new Intent(this,AngaFormActivity.class);
+           intent.putExtra("basekey",baseEntityID);
+           startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -221,6 +229,7 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
         menu.findItem(R.id.action_malaria_diagnosis).setVisible(false);
         menu.findItem(R.id.action_pregnancy_out_come).setVisible(true);
         menu.findItem(R.id.action_anc_registration).setVisible(false);
+        menu.findItem(R.id.action_view_anga).setVisible(true);
         UtilsFlv.updateHivMenuItems(baseEntityID, menu);
         return true;
     }

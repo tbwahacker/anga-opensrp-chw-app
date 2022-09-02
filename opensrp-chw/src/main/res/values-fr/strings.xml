@@ -333,6 +333,11 @@
 
     <string name="cancel_download_confirmation">Vous êtes sûr de vouloir annuler ce téléchargement ?</string>
     <string name="cancel_download">Annuler le téléchargement</string>
+    <string name="view_anga">View Anga</string>
+    <string name="condomdistribution">Condom Distribution</string>
+    <string name="angamodule">Anga\'s Module</string>
+    <string name="angaregistration">Anga Module Registration</string>
+    <string name="anga_register">Anga Register</string>
 
 
 </resources>

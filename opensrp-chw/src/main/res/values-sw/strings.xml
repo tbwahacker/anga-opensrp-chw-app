@@ -434,4 +434,9 @@
     <string name="enrolled_clinic">Amesajiliwa Kliniki</string>
     <string name="referral_feedback_details">Taarifa Kutoka Kituoni</string>
     <string name="referred_by">Rufaa imetolewa na %s</string>
+    <string name="view_anga">View Anga</string>
+    <string name="condomdistribution">Condom Distribution</string>
+    <string name="angamodule">Anga\'s Module</string>
+    <string name="angaregistration">Anga Module Registration</string>
+    <string name="anga_register">Anga Register</string>
 </resources>

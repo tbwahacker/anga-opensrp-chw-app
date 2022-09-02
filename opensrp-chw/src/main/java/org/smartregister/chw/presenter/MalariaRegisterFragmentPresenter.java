@@ -1,13 +1,14 @@
 package org.smartregister.chw.presenter;
 
-import org.smartregister.chw.core.presenter.CoreMalariaRegisterFragmentPresenter;
-import org.smartregister.chw.malaria.contract.MalariaRegisterFragmentContract;
+//import org.smartregister.chw.core.presenter.CoreMalariaRegisterFragmentPresenter;
+//import org.smartregister.chw.malaria.contract.MalariaRegisterFragmentContract;
 
-public class MalariaRegisterFragmentPresenter extends CoreMalariaRegisterFragmentPresenter {
+public class MalariaRegisterFragmentPresenter {
+//    public class MalariaRegisterFragmentPresenter extends CoreMalariaRegisterFragmentPresenter {
 
-    public MalariaRegisterFragmentPresenter(MalariaRegisterFragmentContract.View view,
-                                            MalariaRegisterFragmentContract.Model model, String viewConfigurationIdentifier) {
-        super(view, model, viewConfigurationIdentifier);
-    }
+//    public MalariaRegisterFragmentPresenter(MalariaRegisterFragmentContract.View view,
+//                                            MalariaRegisterFragmentContract.Model model, String viewConfigurationIdentifier) {
+//        super(view, model, viewConfigurationIdentifier);
+//    }
 
 }

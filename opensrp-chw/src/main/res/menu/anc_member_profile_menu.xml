@@ -58,4 +58,19 @@
         android:title="@string/cbhs_registration"
         app:showAsAction="never"
         />
+
+    <item
+        android:id="@+id/action_view_anga"
+        android:enabled="true"
+        android:visible="true"
+        android:title="@string/view_anga"
+        app:showAsAction="never"
+        />
+
+<!--    <item-->
+<!--        android:id="@+id/action_angaregistration"-->
+<!--        android:enabled="true"-->
+<!--        android:title="@string/angaregistration"-->
+<!--        app:showAsAction="never" />-->
+
 </menu>

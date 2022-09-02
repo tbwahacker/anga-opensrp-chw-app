@@ -15,7 +15,7 @@ import org.smartregister.chw.core.utils.ChildDBConstants;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.dao.FamilyDao;
 import org.smartregister.chw.fp.dao.FpDao;
-import org.smartregister.chw.malaria.dao.MalariaDao;
+//import org.smartregister.chw.malaria.dao.MalariaDao;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
 import org.smartregister.family.util.Utils;
@@ -159,7 +159,7 @@ public class FamilyRegisterProvider extends CoreRegisterProvider {
                 pncWomanCount = getPncWomenCount(familyBaseEntityId);
 
             if (ChwApplication.getApplicationFlavor().hasMalaria())
-                malariaCount = MalariaDao.getMalariaFamilyMembersCount(familyBaseEntityId);
+//                malariaCount = MalariaDao.getMalariaFamilyMembersCount(familyBaseEntityId);
 
             if (ChwApplication.getApplicationFlavor().hasFamilyPlanning())
                 fpCount = FpDao.getFpWomenCount(familyBaseEntityId) != null ? FpDao.getFpWomenCount(familyBaseEntityId) : 0;

@@ -4,6 +4,7 @@ import static org.smartregister.chw.util.Utils.updateAgeAndGender;
 
 import android.content.Context;
 import android.view.Menu;
+import android.widget.Toast;
 
 import androidx.viewpager.widget.ViewPager;
 
@@ -89,6 +90,16 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
     @Override
     protected void startMalariaRegister() {
         MalariaRegisterActivity.startMalariaRegistrationActivity(AllClientsMemberProfileActivity.this, baseEntityId, familyBaseEntityId);
+    }
+
+    @Override
+    protected void startAngaRegister() {
+        try {
+            AngaRegisterActivity.startAngaFormActivity(AllClientsMemberProfileActivity.this, baseEntityId, familyBaseEntityId);
+//            AngaRegisterActivity.startAngaFormActivity(AllClientsMemberProfileActivity.this, baseEntityId, Constants.JSON_FORM.getAncRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, Constants.JSON_FORM.getAncRegistration()).toString());
+        } catch (Exception e) {
+            Timber.e("anga error : "+e);
+        }
     }
 
     @Override
