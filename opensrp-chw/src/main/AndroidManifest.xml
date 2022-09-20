@@ -361,8 +361,16 @@
 
         <activity
             android:name="org.smartregister.chw.activity.AngaProfileActivity"
-            android:label="@string/anga_register"
+            android:label="@string/anga_profile"
             android:theme="@style/ChwTheme.NoActionBar" />
+
+
+        <activity
+            android:name="org.smartregister.chw.activity.AngaFollowUpVisitActivity"
+            android:label="@string/anga_followup"
+            android:theme="@style/ChwTheme.NoActionBar" />
+
+
 
         <meta-data
             android:name="io.fabric.ApiKey"

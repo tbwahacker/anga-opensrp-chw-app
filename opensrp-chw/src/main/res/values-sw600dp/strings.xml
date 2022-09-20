@@ -5,4 +5,6 @@
     <string name="angamodule">Anga\'s Module</string>
     <string name="angaregistration">Anga Module Registration</string>
     <string name="anga_register">Anga Register</string>
+    <string name="anga_profile">Anga Profile</string>
+    <string name="anga_followup">Anga Member Followup</string>
 </resources>
